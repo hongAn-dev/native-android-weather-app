@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "235810096241",
+    "project_id": "authen-login-and-signup",
+    "storage_bucket": "authen-login-and-signup.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235810096241:android:def3b0aa9d596865d307d0",
+        "android_client_info": {
+          "package_name": "com.example.loginsingupauthfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKZ02y0c2CH2r2j4JSXwkEUh23sevND5o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235810096241:android:a0afd23b858ca74ed307d0",
+        "android_client_info": {
+          "package_name": "com.example.weatherapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKZ02y0c2CH2r2j4JSXwkEUh23sevND5o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

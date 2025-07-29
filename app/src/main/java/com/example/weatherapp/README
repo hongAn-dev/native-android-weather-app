@@ -1,0 +1,48 @@
+
+├── data/               # Dữ liệu (API, DB, repository)
+│   ├── remote/         # Retrofit
+│   ├── local/          # Room (DAO, Entity)
+│   ├── model/          # DTO và Model
+│   └── repository/     # Giao tiếp giữa data & ViewModel
+│   └── auth/           // Firebase Auth xử lý
+|
+├── domain/             # (Tùy chọn) Business logic / use cases
+│
+├── ui/                 # Giao diện (Compose)
+│   ├── screen/         # Mỗi màn 1 package: home/, detail/
+│   ├── components/     # UI tái sử dụng
+│   └── navigation/     # NavGraph & route
+│
+├── di/                 # Hilt Modules
+│
+├── utils/              # Hàm tiện ích
+│
+├── WeatherApp.kt       # Application class cho Hilt
+└── MainActivity.kt     # Compose Host
+/////////////////////////////////////////////////////////////
+    Luồng MVVM trong app thời tiết
+
+    UI (Compose)
+       ↓  observe state (State / StateFlow)
+    ViewModel (xử lý logic UI)
+       ↓  gọi repo (trong coroutine)
+    Repository (lấy từ API hoặc DB)
+       ↓  trả về dữ liệu (Result / UiState)
+    Model (WeatherData, Forecast, ...)
+
+| Giai đoạn | Việc cần làm                                |
+| --------- | ------------------------------------------- |
+| ✅ GĐ 1    | Setup project + thư viện + folder structure | Done
+| ✅ GĐ 2    | Navigation + Splash + Login                 | - Login đã xong ,navigation đã xong , Splash chưa làm , viewmodel các trang home, detail , location
+                                                             - Update : đã làm location,home,detail screen
+| ✅ GĐ 3    | Firebase Auth + LoginViewModel              | Done
+| ✅ GĐ 4    | Retrofit + gọi API thời tiết                | - đã xog cho trang Home
+| ✅ GĐ 5    | Room DB cache thời tiết                     | Done
+| ✅ GĐ 6    | HomeScreen hiển thị dữ liệu thời tiết       | 
+| ✅ GĐ 7    | DetailScreen + dữ liệu từng giờ             | chưa làm xử lý giờ
+| ✅ GĐ 8    | Loading, Error handling, UI polish          | Continue
+| ✅ GĐ 9    | Test, Refactor, Optimize performance        | Continue
+
+
+
+"Hãy nhớ rằng tôi đang làm project thời tiết với Retrofit, Compose, và logic icon động theo API." // tiếp với chat
